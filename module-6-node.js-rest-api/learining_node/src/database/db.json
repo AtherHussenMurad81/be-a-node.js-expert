@@ -1,10 +1,52 @@
 [
   {
     "id": 1,
-    "name": "frouts"
+    "name": "Apple",
+    "price": 120
   },
   {
     "id": 2,
-    "name": "banana"
+    "name": "Banana",
+    "price": 60
+  },
+  {
+    "id": 3,
+    "name": "Mango",
+    "price": 150
+  },
+  {
+    "id": 4,
+    "name": "Orange",
+    "price": 100
+  },
+  {
+    "id": 5,
+    "name": "Grapes",
+    "price": 200
+  },
+  {
+    "id": 6,
+    "name": "Pineapple",
+    "price": 180
+  },
+  {
+    "id": 7,
+    "name": "Watermelon",
+    "price": 90
+  },
+  {
+    "id": 8,
+    "name": "Papaya",
+    "price": 80
+  },
+  {
+    "id": 9,
+    "name": "Guava",
+    "price": 70
+  },
+  {
+    "id": 10,
+    "name": "Strawberry",
+    "price": 300
   }
 ]
