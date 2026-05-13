@@ -1,22 +1,18 @@
 import { createServer } from "http";
+import { sendResponse } from "./utiles";
+import { orderRoute } from "./routes/order.route";
+import type { Req } from "./types";
 
-const server = createServer((req, res) => {
+const server = createServer(async (req, res) => {
   const url = req.url ?? "/";
   if (url === "/") {
-    res.writeHead(200, { "content-type": "application/json" });
-    res.end(
-      JSON.stringify({
-        message: "hkjahk",
-      }),
-    );
-  } else {
-    res.writeHead(200, { "content-type": "application/json" });
-    res.end(
-      JSON.stringify({
-        message: "massge not found",
-      }),
-    );
+    sendResponse(res, { message: "welcome to out home server" });
+    return;
+  } else if (url.startsWith("/order")) {
+    await orderRoute(req as Req, res);
+    return;
   }
+  sendResponse(res, { message: "Server cannot found" });
 });
 const PORT = 3000;
 server.listen(PORT, () => {
